@@ -1,6 +1,5 @@
 from random import choice
 
-#CHANGE BOARD TO STRING THINGY THAT CAN BE PRINTED OUT
 board = """
     1 | 2 | 3
     4 | 5 | 6
@@ -27,14 +26,12 @@ def player_play():
     location = input("Where do you want the X to go? ")
     location = int(location)
     board = board.replace(str(location), letter_selection)
-    #print(location in locations)
     while location not in locations:
         print("That location is taken! Pick again.") 
         location = input("Where do you want the X to go? ")
         location = int(location)
         board = board.replace(str(location), letter_selection)
     counter += 1
-    print(counter)
     locations.remove(location)
 
 print("Welcome to a game of tic-tac-toe!")
