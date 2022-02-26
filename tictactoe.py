@@ -56,3 +56,17 @@ while counter < 5:
     virtual_play()
     display_board()
 
+positive = ["y", "Y", "Yes", "yes", "YES"]
+negative = ["n", "N", "no", "NO", "No"]
+end_game = input("Check the board. Did anyone win yet? ")
+if end_game in positive:
+    result = input("Did you win? y/n ")
+    if result in positive:
+        print("You won!")
+    print("Better luck next time!")
+else:
+    while end_game not in positive:
+        player_play()
+        virtual_play()
+        print(board)
+        end_game = input("Check the board. Did anyone win yet? ")
